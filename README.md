@@ -34,6 +34,7 @@ A modern, responsive blog platform for machine learning insights and AI research
 - **Recommended Reading** sidebar with fixed positioning
 - **Search Functionality** for post discovery
 - **Tag System** for content organization
+- **PDF Export** feature for saving blog posts
 
 ## 🛠️ Tech Stack
 
@@ -41,6 +42,7 @@ A modern, responsive blog platform for machine learning insights and AI research
 - **Language:** TypeScript
 - **Styling:** CSS Modules with custom properties
 - **Content:** Markdown with gray-matter
+- **PDF Export:** jsPDF for document generation
 - **Deployment:** GitHub Pages with GitHub Actions
 - **Icons:** Lucide React
 
@@ -75,7 +77,7 @@ my-app/
 1. **Clone the repository**
    ```bash
    git clone https://github.com/yourusername/ml-mondays.git
-   cd ml-mondays/my-app
+   cd my-app
    ```
 
 2. **Install dependencies**
@@ -114,9 +116,25 @@ Your markdown content here...
 
 Automatic deployment to GitHub Pages via GitHub Actions:
 
-1. Push to `main` branch
-2. GitHub Actions builds and deploys
-3. Site available at `https://yourusername.github.io/repository-name`
+1. **Push to GitHub**:
+   ```bash
+   git add .
+   git commit -m "Deploy to GitHub Pages"
+   git push origin main
+   ```
+
+2. **GitHub Actions automatically**:
+   - Installs dependencies
+   - Builds the static site
+   - Deploys to GitHub Pages
+
+3. **Site available at**: `https://yourusername.github.io/prajwalindrakh-mlmondays`
+
+### Manual Build
+```bash
+npm run build
+# Output in ./out directory
+```
 
 ## 📊 Assessment Criteria Met
 
@@ -163,11 +181,30 @@ Automatic deployment to GitHub Pages via GitHub Actions:
 - **Modern Navigation**: Fixed glassmorphism header with mobile menu
 - **Animated Hero**: Bouncing ML Mondays title with gradient text
 - **Interactive Carousel**: Blog previews with title overlays
+- **PDF Export**: Save any blog post as a formatted PDF document
 - **Mobile Optimized**: Perfect experience from 320px to desktop
 
 ## 📄 License
 
 MIT License - feel free to use this project as a template for your own blog!
+
+---
+
+## 🚀 Ready for Deployment
+
+Your ML Mondays blog is now ready for GitHub Pages deployment with:
+
+✅ **PDF Export Feature** - Save blog posts as formatted PDFs  
+✅ **Optimized Build** - Static site generation for fast loading  
+✅ **GitHub Actions** - Automatic deployment on push to main  
+✅ **Neural Hive Theme** - Purple/cyan gradient design  
+✅ **Mobile Responsive** - Perfect on all devices  
+✅ **SEO Optimized** - Meta tags, sitemap, and robots.txt  
+
+### Next Steps:
+1. Push to your GitHub repository
+2. Enable GitHub Pages in repository settings
+3. Your site will be live at `https://yourusername.github.io/prajwalindrakh-mlmondays`
 
 ---
 

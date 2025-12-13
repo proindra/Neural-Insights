@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { getAllPosts, getPostBySlug } from '@/lib/posts';
 import { getImagePath } from '@/lib/utils';
+import PDFExport from '@/components/PDFExport';
 
 interface PostPageProps {
   params: Promise<{ slug: string }>;
@@ -76,6 +77,12 @@ export default async function PostPage({ params }: PostPageProps) {
                   ))}
                 </div>
               )}
+
+              <PDFExport 
+                title={post.title}
+                author={post.author}
+                date={format(new Date(post.date), 'MMMM dd, yyyy')}
+              />
             </header>
 
             <div 

@@ -16,7 +16,7 @@ body {
 }
 
 body {
-  background: url('/prajwalindrakh-mlmondays/logo.png') no-repeat center center;
+  background: url('/logo.png') no-repeat center center;
   background-size: 800px auto;
   background-attachment: fixed;
   color: var(--foreground);
@@ -1781,6 +1781,34 @@ body::before {
   font-size: 0.875rem;
   color: #9ca3af;
   margin-top: 1rem;
+}
+
+/* PDF Export Button */
+.pdf-export-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(to right, #9333ea, #7c3aed);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+}
+
+.pdf-export-btn:hover {
+  background: linear-gradient(to right, #7c3aed, #6d28d9);
+  transform: translateY(-1px);
+}
+
+.pdf-export-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
 }
 
 /* Utilities */
