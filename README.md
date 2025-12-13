@@ -4,7 +4,7 @@ A modern, responsive blog platform for machine learning insights and AI research
 
 ## 🚀 Live Demo
 
-[View Live Site](https://neuralhive.github.io/ml-mondays](https://proindra.github.io/prajwalindrakh-mlmondays/)
+[View Live Site](https://proindra.github.io/prajwalindrakh-mlmondays/)
 
 ## ✨ Features
 
