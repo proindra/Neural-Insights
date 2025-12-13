@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { getImagePath } from '@/lib/utils';
 
 export default function Footer() {
   return (
@@ -7,7 +8,7 @@ export default function Footer() {
         <div className="footer-grid">
           <div className="footer-brand">
             <div className="footer-logo">
-              <img src="/logo.png" alt="Neural Hive Logo" className="footer-logo-image" />
+              <img src={getImagePath("/logo.png")} alt="Neural Hive Logo" className="footer-logo-image" />
               <span className="footer-logo-text gradient-text">ML Mondays</span>
             </div>
             <p className="footer-description">

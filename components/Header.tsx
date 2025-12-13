@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { Menu, X, Github, Twitter } from 'lucide-react';
 import Image from 'next/image';
+import { getImagePath } from '@/lib/utils';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,7 +39,7 @@ export default function Header() {
           <Link href="/" className="header-logo">
             <div className="logo-container">
               <Image
-                src="/logo.png"
+                src={getImagePath("/logo.png")}
                 alt="Neural Hive Logo"
                 width={64}
                 height={64}
