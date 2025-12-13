@@ -1,4 +1,5 @@
 import { Mail, FileText, Users, CheckCircle } from 'lucide-react';
+import Link from 'next/link';
 
 export default function WriteForUsPage() {
   return (
@@ -145,9 +146,9 @@ export default function WriteForUsPage() {
             <Mail size={20} />
             Send Your Pitch
           </a>
-          <a href="/ethos/" className="btn-secondary">
+          <Link href="/ethos" className="btn-secondary">
             Read Our Guidelines
-          </a>
+          </Link>
         </div>
         <p className="contact-info">
           Email: writers@neuralhive.dev | Response time: 3-5 business days
