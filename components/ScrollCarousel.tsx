@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { BlogPost } from '@/types';
+import { getImagePath } from '@/lib/utils';
 
 const carouselItems = [
   { image: '/ai-working-group.jpg', slug: 'feature-engineering-mastery' },
@@ -36,7 +37,7 @@ export default function ScrollCarousel({ posts }: ScrollCarouselProps) {
             onClick={() => router.push(`/posts/${item.slug}`)}
           >
             <Image
-              src={item.image}
+              src={getImagePath(item.image)}
               alt={`Blog post image ${index + 1}`}
               fill
               className="image-fill"

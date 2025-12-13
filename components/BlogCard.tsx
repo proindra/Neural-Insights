@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Clock, User } from 'lucide-react';
 import { BlogPost } from '@/types';
+import { getImagePath } from '@/lib/utils';
 
 interface BlogCardProps {
   post: BlogPost;
@@ -16,7 +17,7 @@ export default function BlogCard({ post, featured = false }: BlogCardProps) {
           {post.image && (
             <div className="blog-card-image">
               <Image
-                src={post.image}
+                src={getImagePath(post.image)}
                 alt={post.title}
                 fill
                 className="image-fill"
