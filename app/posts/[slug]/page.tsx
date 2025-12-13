@@ -4,6 +4,7 @@ import { Clock, User, ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { getAllPosts, getPostBySlug } from '@/lib/posts';
+import { getImagePath } from '@/lib/utils';
 
 interface PostPageProps {
   params: Promise<{ slug: string }>;
@@ -41,7 +42,7 @@ export default async function PostPage({ params }: PostPageProps) {
           {post.image && (
             <div className="post-image">
               <Image
-                src={post.image}
+                src={getImagePath(post.image)}
                 alt={post.title}
                 fill
                 className="image-fill"
@@ -109,7 +110,7 @@ export default async function PostPage({ params }: PostPageProps) {
                       {recommendedPost.image && (
                         <div className="recommended-image">
                           <Image
-                            src={recommendedPost.image}
+                            src={getImagePath(recommendedPost.image)}
                             alt={recommendedPost.title}
                             fill
                             className="image-fill"
