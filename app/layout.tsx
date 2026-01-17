@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://proindra.github.io/Neural-Insights"),
+  metadataBase: new URL("https://proindra.github.io/prajwalindrakh-mlmondays"),
   title: "Neural Insights | Neural Hive - Machine Learning & AI Insights",
   description: "Weekly machine learning insights, AI research, and neural network tutorials from the Neural Hive community. Explore cutting-edge ML content every Monday.",
   keywords: "machine learning, artificial intelligence, neural networks, deep learning, AI research, ML tutorials, data science",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Neural Insights | Neural Hive",
     description: "Weekly machine learning insights and AI research from the Neural Hive community",
-    url: "https://proindra.github.io/Neural-Insights",
+    url: "https://proindra.github.io/prajwalindrakh-mlmondays",
     siteName: "Neural Insights",
     images: [{
       url: "/neural-hive-logo.svg",
@@ -55,7 +55,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="canonical" href="https://proindra.github.io/Neural-Insights" />
+        <link rel="canonical" href="https://proindra.github.io/prajwalindrakh-mlmondays" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </head>
