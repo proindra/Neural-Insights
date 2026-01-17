@@ -58,6 +58,20 @@ export default function RootLayout({
         <link rel="canonical" href="https://proindra.github.io/prajwalindrakh-mlmondays" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            (function(l) {
+              if (l.search[1] === '/' ) {
+                var decoded = l.search.slice(1).split('&').map(function(s) { 
+                  return s.replace(/~and~/g, '&')
+                }).join('?');
+                window.history.replaceState(null, null,
+                    l.pathname.slice(0, -1) + decoded + l.hash
+                );
+              }
+            }(window.location))
+          `
+        }} />
       </head>
       <body className={`${inter.className}`}>
         <Header />
