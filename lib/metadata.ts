@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 export const siteConfig = {
   name: 'ML Mondays - Neural Hive',
   description: 'Exploring the frontiers of machine learning, AI research, and neural networks. Weekly insights from the Neural Hive community.',
-  url: 'https://ml-mondays.neuralhive.dev',
+  url: 'https://proindra.github.io/Neural-Insights',
   ogImage: '/og-image.png',
 };
 

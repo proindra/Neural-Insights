@@ -36,7 +36,7 @@ export default function Header() {
     sessionStorage.removeItem('userMode');
     sessionStorage.removeItem('guestId');
     setUserMode(null);
-    window.location.href = 'https://proindra.github.io/prajwalindrakh-mlmondays/';
+    window.location.href = '/';
   };
 
   const isActive = (href: string) => {
