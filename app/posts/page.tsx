@@ -1,9 +1,49 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+import { Search } from 'lucide-react';
 import { getAllPosts } from '@/lib/posts';
 import BlogCard from '@/components/BlogCard';
-import { Search } from 'lucide-react';
 
 export default function PostsPage() {
-  const posts = getAllPosts();
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [posts, setPosts] = useState<any[]>([]);
+
+  useEffect(() => {
+    const userMode = sessionStorage.getItem('userMode');
+    
+    if (!userMode) {
+      window.location.href = '/prajwalindrakh-mlmondays/login';
+      return;
+    }
+    
+    setIsAuthenticated(true);
+    setPosts(getAllPosts());
+    setIsLoading(false);
+  }, []);
+
+  if (isLoading) {
+    return (
+      <div className="auth-container">
+        <div className="auth-card">
+          <div className="auth-header">
+            <h1 className="auth-title">Checking Access...</h1>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  if (!isAuthenticated) {
+    return null;
+  }
+
+  const filteredPosts = posts.filter(post =>
+    post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    post.excerpt.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
     <div className="page-container">
@@ -21,24 +61,23 @@ export default function PostsPage() {
             type="text"
             placeholder="Search posts..."
             className="search-input"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
           />
         </div>
       </div>
 
-      {posts.length > 0 ? (
+      {filteredPosts.length > 0 ? (
         <div className="posts-grid">
-          {posts.map((post) => (
+          {filteredPosts.map((post) => (
             <BlogCard key={post.slug} post={post} />
           ))}
         </div>
       ) : (
         <div className="posts-empty">
           <div className="empty-icon"></div>
-          <h3>No posts yet</h3>
-          <p>Be the first to contribute to ML Mondays!</p>
-          <a href="/write-for-us" className="btn-primary">
-            Write for Us
-          </a>
+          <h3>No posts found</h3>
+          <p>Try adjusting your search terms</p>
         </div>
       )}
     </div>
