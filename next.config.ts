@@ -5,8 +5,8 @@ const isProd = process.env.NODE_ENV === 'production';
 const nextConfig: NextConfig = {
   output: 'export',
   trailingSlash: true,
-  basePath: isProd ? '/prajwalindrakh-mlmondays' : '',
-  assetPrefix: isProd ? '/prajwalindrakh-mlmondays/' : '',
+  basePath: isProd ? '/Neural-Insights' : '',
+  assetPrefix: isProd ? '/Neural-Insights/' : '',
   images: {
     unoptimized: true
   }
