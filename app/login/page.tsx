@@ -49,7 +49,7 @@ export default function LoginPage() {
       }
       
       // Redirect to home
-      window.location.href = '/prajwalindrakh-mlmondays/';
+      window.location.href = 'https://proindra.github.io/prajwalindrakh-mlmondays/';
       
     } catch (error) {
       console.error(`${type} login error:`, error);
