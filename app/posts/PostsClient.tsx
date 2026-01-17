@@ -17,7 +17,7 @@ export default function PostsClient({ posts }: PostsClientProps) {
     const userMode = sessionStorage.getItem('userMode');
     
     if (!userMode) {
-      window.location.href = 'https://proindra.github.io/Neural-Insights/login';
+      window.location.href = 'https://proindra.github.io/prajwalindrakh-mlmondays/login';
       return;
     }
     
